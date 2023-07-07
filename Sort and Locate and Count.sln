@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort and Locate and Count", "Sort and Locate and Count.csproj", "{43413623-04B1-4B31-846F-751F69EF35F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43413623-04B1-4B31-846F-751F69EF35F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43413623-04B1-4B31-846F-751F69EF35F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43413623-04B1-4B31-846F-751F69EF35F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43413623-04B1-4B31-846F-751F69EF35F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAD723A2-6196-4FAE-8D43-C29BC3A7A03C}
+	EndGlobalSection
+EndGlobal
