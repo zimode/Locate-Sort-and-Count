@@ -150,13 +150,13 @@ namespace Sort_and_Locate_and_Count
             for (int i = 0; i < csvLines.Length; i++)
             {
                 var values = csvLines[i].Split(',');
-                if (values[1].Contains(Group))
+                // if (values[1].Contains(Group))
+                if (values[1].Equals(Group))
                 {
                     string _count = values[2];
                     int NewCount = Convert.ToInt32(values[2]);
                     NewCount = NewCount +1;
                     values[2] = NewCount.ToString();
-                    //using (FileStream stream = new FileStream("C:\\Users\\hughesa3\\Desktop\\test environment\\users.csv", FileMode.Create))
                     using (FileStream stream = new FileStream(path, FileMode.Create))
                     {
                         using (StreamWriter writer = new StreamWriter(stream, encoding))
