@@ -4,4 +4,4 @@ Takes input from the user and tracks the number of times the same input has been
 
 If an invalid input was entered the line entry for that invalid item can be deleted.
 
-When a count has been completed the counts can be cleared and reset to none.
+When a count has been completed the counts and items can be cleared and reset.
