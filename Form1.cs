@@ -57,8 +57,10 @@ namespace Sort_and_Locate_and_Count
 
                     foreach (string column in colFields)
                     {
-                        DataColumn serialno = new DataColumn(column);
-                        serialno.AllowDBNull = true;
+                        DataColumn serialno = new DataColumn(column)
+                        {
+                            AllowDBNull = true
+                        };
                         csvData.Columns.Add(serialno);
                     }
 
@@ -153,9 +155,9 @@ namespace Sort_and_Locate_and_Count
                 // if (values[1].Contains(Group))
                 if (values[1].Equals(Group))
                 {
-                    string _count = values[2];
+                    //string _count = values[2];
                     int NewCount = Convert.ToInt32(values[2]);
-                    NewCount = NewCount +1;
+                    NewCount++;
                     values[2] = NewCount.ToString();
                     using (FileStream stream = new FileStream(path, FileMode.Create))
                     {
@@ -213,18 +215,13 @@ namespace Sort_and_Locate_and_Count
             TextBox1.Text.ToUpper();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
             if (dataGridView1.RowCount != 0)
             {
                 int rowindex = dataGridView1.CurrentCell.RowIndex;
-                int columnindex = dataGridView1.CurrentCell.ColumnIndex;
-
-                string loc = dataGridView1.Rows[rowindex].Cells[0].Value.ToString();
                 string group = dataGridView1.Rows[rowindex].Cells[1].Value.ToString();
-                string qty = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
-
 
                 DeleteLine(group, _FilePath + "\\" + _TrackingFile);
                 FillGridveiw();
@@ -265,7 +262,7 @@ namespace Sort_and_Locate_and_Count
             ToCSV(dt, file_path);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             if (File.Exists(_FilePath + "\\" + _TrackingFile))
             {
@@ -350,10 +347,7 @@ namespace Sort_and_Locate_and_Count
 
                 foreach (DataGridViewRow dgvr in dataGridView1.Rows)
                 {
-                    //if (dgvr.Cells[7].Value < dgvr.Cells[10].Value)
-                    //{
-                    //    dgvr.DefaultCellStyle.ForeColor = Color.Red;
-                    //}
+ 
                     string t = dgvr.Cells[1].Value.ToString();
                     if (t == TextBox1.Text.ToUpper())
                     {
@@ -372,9 +366,5 @@ namespace Sort_and_Locate_and_Count
 
         }
 
-        //private void TextBox1_TextChanged(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }
